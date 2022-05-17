@@ -1,24 +1,20 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable import/no-unresolved */
-import type { AppProps } from 'next/app';
-import { ThirdwebWeb3Provider } from '@3rdweb/hooks';
-import 'regenerator-runtime/runtime';
+import type { AppProps } from "next/app";
+import { Web3ReactProvider } from "@web3-react/core";
 
-import '../../styles/globals.scss';
+import "../../styles/globals.scss";
+import Web3 from "web3";
+
+function getLibrary(provider: any) {
+  return new Web3(provider);
+}
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const supportedChainIds = [1, 4, 137, 56];
-  const connectors = {
-    injected: {},
-  };
-
   return (
-    <ThirdwebWeb3Provider
-      supportedChainIds={supportedChainIds}
-      connectors={connectors}
-    >
-      <Component {...pageProps} />
-    </ThirdwebWeb3Provider>
+    <Web3ReactProvider getLibrary={getLibrary}>
+      <Component {...pageProps} />;
+    </Web3ReactProvider>
   );
 }
 

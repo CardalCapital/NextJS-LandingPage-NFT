@@ -9,16 +9,42 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 /* Web3 */
+import { injected } from "../../services/connector";
+import { useWeb3React } from "@web3-react/core";
 
-import { useWeb3 } from '@3rdweb/hooks';
 
 export default function Header() {
+const { active, account, activate } = useWeb3React();
+  const [accountAdress, setAccountAdress] = useState<string>("");
+
+  async function tryRequestData(): Promise<boolean> {
+    const isLogged = await injected.isAuthorized();
+    return isLogged;
+  }
+
   useEffect(() => {
+    tryRequestData().then((response) => {
+      if (response) {
+        connect();
+      }
+    });
+  }, []);
+
+  useEffect(() => {
+    if (account) {
+      setAccountAdress(account);
+    }
+    console.log(accountAdress);
     AOS.init();
   }, []);
 
-  const { connectWallet, address, error, disconnectWallet } = useWeb3();
-  error ? console.log(error) : null;
+  async function connect() {
+    try {
+      await activate(injected);
+    } catch (err) {
+      console.log(err);
+    }
+  }
 
   return (
     <header
@@ -61,14 +87,8 @@ export default function Header() {
           data-aos-delay='50'
           data-aos-duration='2000'
         >
-          <div className='flex flex-col items-center justify-center min-h-screen py-2 bg-slate-100'>
-            {address ? (
-              <button onClick={() => disconnectWallet()}>{address}</button>
-            ) : (
-              <button onClick={() => connectWallet('injected')}>
-                Connect Wallet
-              </button>
-            )}
+          <div>
+            <button onClick={connect}>{active ? <span> {account}</span> : <span>Connect Wallet</span>}</button>
           </div>
         </li>
       </ul>
