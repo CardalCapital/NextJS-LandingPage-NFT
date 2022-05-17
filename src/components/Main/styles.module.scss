@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  .row {
+    h1 {
+      font-weight: 500;
+      font-size: 62px;
+      line-height: 80px;
+      color: #ff0084;
+    }
+    .content {
+      font-weight: 500;
+      font-size: 38px;
+      line-height: 46px;
+      color: #fff;
+      a {
+        border-bottom: 5px solid #ff0084;
+        cursor: pointer;
+      }
+    }
+    .btnMain {
+      button {
+        background: transparent;
+        color: #fff;
+        padding: 15px 90px;
+        border: 0px;
+        font-size: 18px;
+        font-weight: 600;
+        span {
+          cursor: pointer;
+        }
+      }
+    }
+    .mainImg {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      flex-wrap: wrap;
+      .token {
+        width: 200px;
+        height: auto;
+        -webkit-animation: spin 4s linear infinite;
+        -moz-animation: spin 4s linear infinite;
+        animation: spin 4s linear infinite;
+      }
+      .hand {
+        width: 500px;
+        height: auto;
+      }
+      @-moz-keyframes spin {
+        100% {
+          -moz-transform: rotate(360deg);
+        }
+      }
+      @-webkit-keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      @keyframes spin {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-top: 20px;
+    .row {
+      padding: 40px 0px;
+      text-align: center;
+      margin: 0px;
+      h1 {
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+      }
+      .content {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+        span {
+          border-bottom: 3px solid #ff0084;
+        }
+      }
+      .btnMain {
+        button {
+          width: 224px;
+          height: 40px;
+          padding: 0px;
+          margin-top: 30px;
+        }
+      }
+      .mainImg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .token {
+          width: 130px;
+          height: auto;
+        }
+        .hand {
+          width: 200px;
+          height: auto;
+        }
+      }
+    }
+  }
+}

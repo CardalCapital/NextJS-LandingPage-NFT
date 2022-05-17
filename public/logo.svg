@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="362" height="112" viewBox="0 0 362 112">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 237.5px;
+        fill: #ff0084;
+        font-family: Poppins;
+        font-weight: 500;
+      }
+
+      .cls-2 {
+        font-weight: 300;
+      }
+    </style>
+  </defs>
+  <text id="NFTUI" class="cls-1" transform="translate(46.997 89.144) scale(0.408)">NFT<tspan class="cls-2">UI</tspan></text>
+</svg>

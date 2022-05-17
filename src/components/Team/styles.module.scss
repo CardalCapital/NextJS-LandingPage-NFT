@@ -1,0 +1,42 @@
+.team {
+  h1 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #fff;
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    .card {
+      padding: 70px;
+      margin: 10px; 
+      @media screen and (max-width: 1226px) {
+        margin: 2px;
+        padding: 20px;
+      }
+      img {
+        max-width: 100%;
+        height: auto;
+        width: 150px;
+        border-radius: 100px;
+      }
+      h3 {
+        color: #ff0084;
+        text-align: center;
+        margin: 0;
+      }
+      p {
+        color: #fff;
+        text-align: center;
+        font-weight: 300;
+        margin: 0;
+      }
+    }
+  }
+}

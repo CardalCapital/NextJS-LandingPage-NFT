@@ -1,0 +1,47 @@
+.footer {
+  h5 {
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    font-size: 30px;
+    font-weight: 300;
+    span {
+      color: #ff0084;
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+  form {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    margin-top: 0;
+    
+    
+    input {
+      width: 400px;
+      padding: 15px;
+      outline: none;
+      background-color: transparent;
+      border: 0;
+      border: 2px solid #ff0084;
+      border-top-left-radius: 8px;
+      border-bottom-left-radius: 8px;
+    }
+    button {
+      background-color: #ff0084;
+      border: 0;
+      color: #fff;
+      font-weight: 700;
+      cursor: pointer;
+      border-bottom-right-radius: 8px;
+      border-top-right-radius: 8px;
+      
+    }
+  }
+  p {
+    color: #fff;
+    text-align: center;
+    font-weight: 300;
+  }
+}
