@@ -16,7 +16,7 @@ const About = () => {
           <Image src='/about.png' alt='' width={450} height={450} />
         </div>
         <div className={styles.content}>
-          <h1>Welcome to the new age</h1>
+          <h1>Welcome to <br />the new age</h1>
           <p>
             An NFT is a digital asset that represents real-world objects like{' '}
             <br />

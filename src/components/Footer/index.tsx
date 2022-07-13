@@ -10,8 +10,9 @@ export default function Footer() {
       id='contact'
     >
       <h5>
-        SignUp for <span>NEWSLETTER</span>
-      </h5>{' '}
+        SignUp for <br />
+        <span>NEWSLETTER</span>
+      </h5>
       <br></br>
       <form action=''>
         <input type='text' />
